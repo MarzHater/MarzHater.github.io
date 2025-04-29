@@ -5,6 +5,9 @@
     font-family:'Poppins',sans-serif;
     list-style: none;
 }
+html{
+    scroll-behavior: smooth;
+}
 .header{
     position :fixed;
     top: 0;
