@@ -23,7 +23,7 @@
             <h1>How many moons contemplating this misfortune</h1>
             
             <p>I'm a Spanish 22 y/o variety streamer on <a href="https://www.twitch.tv/marzhater">Twitch</a>
-            This website serves as a place for my socials as well as a small gallery of my best VRChat pics</p>
+            This website serves as a place for my socials as well as a small gallery of some of my VRChat pics</p>
         </div>
         <div class="img-box">
             <img src="PlasmaMain.jpg" alt="Plasma in front of a black hole">
@@ -31,18 +31,28 @@
     </section>
 
     <section class="gallery" id="gallery">
-        <!--Gallery item start-->
-        <div class="gallery-item">
-          <img src="https://i.imgur.com/SaZFvoA.png" alt="Journey's End">
-          <h3>Journey's End</h3>
-          <p>The chapter is closing<br>No matter how painful it was<br>It gives a sense of void</p>
-        </div>
-        <!--Gallery item end-->
-        <div class="gallery-item">
-          <img src="https://i.imgur.com/6X4OxBt.jpeg" alt="Exxe Plasma Render">
-          <h3>Despite everything, It's still you</h3>
-          <p>Time passes and people change<br>But you, you never change<br></p>
-        </div>
+        <script src="https://cdn.jsdelivr.net/npm/tabletop@1.5.4/tabletop.min.js"></script>
+        <script>
+          window.addEventListener('DOMContentLoaded', () => {
+            Tabletop.init({
+              key: '16Wjzh9weTXK8Mx3vfKPWR1KurXinO2s_SKRSjLZASHU',
+              simpleSheet: true,
+              callback: function(data) {
+                const gallery = document.getElementById('gallery');
+                data.forEach(item => {
+                  const div = document.createElement('div');
+                  div.className = 'gallery-item';
+                  div.innerHTML = `
+                    <img src="${item.image_url}" alt="${item.title}" style="max-width: 100%; height: auto;">
+                    <h3>${item.title}</h3>
+                    <p>${item.description1}</p><p>${item.description2}</p><p>${item.description3}</p>
+                  `;
+                  gallery.appendChild(div);
+                });
+              }
+            });
+          });
+        </script>
     </section>
 </body>
 </html>
