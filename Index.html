@@ -37,7 +37,7 @@
                 </a>
               </div>
           <div class="popup-quote">
-            The sensation that I've lost something lingers for a long time after I wake up.
+            How many moons contemplating this misfortune.
           </div>
         <a class="popup-close" onclick="history.back()">&times;</a>
       </div>
@@ -71,8 +71,47 @@
     </div>
       <!-- Plasma -->
     <div class="content" id="plasma">
-      <h2>Plasma</h2>
-      <p>y e s</p>
+      <img class="banner" src="img/plasmaBanner.jpg" style="height:200px"></img>
+      <h2>Meet Plasma</h2>
+      <p>
+        Plasma is my fursona. He's the representation of who I am, with a lot of symbolysm tied into the design.<br>
+        He is my energy, my struggles, my pain, my creativity, he is my history.<br>
+        Plasma is the result of two very different minds melded into one. Of past traumas and experiences that shaped who I am today.<br>
+        A story of pain and desperation, finished with a tame and calm end, though not a good one.<br>
+      </p>
+      <p>For an actual ref, go <a href="https://drive.google.com/drive/folders/1M6JbczaoBmhzIDNOyEMKnsbZNdpKOySy?usp=sharing">here</a> and <a href="https://drive.google.com/drive/folders/1wPoHcW6gv3oewPi4TANOx3WfPmUi1suZ?usp=sharing">here.</a></p>
+      <h2>Symbolysm</h2>
+      <p>
+        There are three main design points in Plasma. The Pentagram, the scars and the Leviathan crosses.<br>
+      </p>
+      <ul>
+        <li><strong>The Pentagram</strong> is a strong symbol with various meaning through history. It represents my love for for the occult and my firm beliefs.<br>
+          It is also important that it's not a pentacle nor an inverted pentagram. Having the star point up represents mind over matter to me.
+        </li>
+        <li><strong>The scars</strong> are a representation of my past traumas and struggles. They are a reminder of what I've been through and how I've overcome it.<br>
+          They will never fully heal, for the past can not be changed, but they are a part of who I am today.
+        </li>
+        <li><strong>The Leviathan crosses</strong> are by far the most important design element. The infinity sign at the bottom represents the eternal nature of reality<br>
+          while the double cross at the top represents balance and duality. The two sides of who I used to be.<br>
+          The association with <a href="https://en.wikipedia.org/wiki/Leviathan">Leviathan</a> makes it a symbol of depth and surfacing, meaning the many challenges I've overcome.<br>
+          Leviathan itself is also a symbol of chaos and power, two ideals I strive to embody through my own path.<br>
+          One on each hand represents Exxe on the left and Lune on the right. Whose names and memories I will never forget. May you always guide me like you once did.
+        </li>
+      </ul>
+      <small>The next section is a WIP.<br></small>
+      <!-- Plasma Gallery -->
+      <div class="avatar-bar">
+        <a onclick="showAvatar('avatar1', this)" class="active">Nardoragon</a>
+        <a onclick="showAvatar('avatar2', this)">Novabeast</a>
+        <a onclick="showAvatar('avatar3', this)">Mayu</a>
+      </div>
+
+      <!-- Avatar Images -->
+      <div class="avatar-display">
+        <img id="avatar1" src="img/nardo.jpg" alt="Nardoragon" class="active">
+        <img id="avatar2" src="img/nova.jpg" alt="Novabeast">
+        <img id="avatar3" src="img/mayu.png" alt="Mayu">
+      </div>
     </div>
   </main>
 
@@ -90,6 +129,19 @@
     //update nav
     const navLinks = document.querySelectorAll('nav a');
     navLinks.forEach(link => link.classList.remove('active'));
+    element.classList.add('active');
+  }
+  </script>
+  <script>
+  function showAvatar(id, element) {
+    // update image
+    const avatars = document.querySelectorAll('.avatar-display img');
+    avatars.forEach(img => img.classList.remove('active'));
+    document.getElementById(id).classList.add('active');
+
+    // update nav
+    const avatarLinks = document.querySelectorAll('.avatar-bar a');
+    avatarLinks.forEach(link => link.classList.remove('active'));
     element.classList.add('active');
   }
   </script>

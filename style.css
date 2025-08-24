@@ -125,7 +125,17 @@ main {
 #projects ul li::marker {
     color: var(--neon-pink);
 }
+/* Plasma List */
+#plasma ul {
+    list-style-type: disc;      /* Default bullet points */
+    padding-left: 20px;         /* indent */
+    margin-top: 10px;
+    color: white;
+}
 
+#plasma ul li::marker {
+    color: var(--neon-pink);
+}
 
 /* link color */
 #projects ul li a {
@@ -144,6 +154,21 @@ main {
     cursor: pointer;
 }
 
+#plasma p a{
+    color: var(--neon-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, text-shadow 0.3s ease
+}
+
+#plasma ul li a {
+    color: var(--neon-blue);
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease, text-shadow 0.3s ease;
+    cursor: pointer;
+}
+
 h1 {
     font-size: 2em;
     margin-bottom: 10px;
@@ -153,6 +178,17 @@ h1 {
 
 p {
     line-height: 1.6;
+}
+
+/* Banner Plasma */
+.banner {
+    width: auto;
+    height: auto;
+    margin-left: 100px;
+    border-radius: 12px;
+    box-shadow: 0 0 15px var(--neon-purple);
+    margin-bottom: 20px;
+    border: 2px solid var(--neon-pink);
 }
 
 /* Popup */
@@ -255,6 +291,63 @@ p {
     color: var(--bgColor);
 }
 
+/* Avatar text nav */
+.avatar-bar {
+    margin: 20px auto;
+    display: inline-flex;
+    justify-content: flex-start;
+    gap: 12px;
+    padding: 10px 15px;
+    background: rgba(20, 0, 30, 0.6);
+    border-radius: 16px;
+    border: 2px solid var(--neon-pink);
+    box-shadow: 0 0 15px var(--neon-purple);
+}
+
+.avatar-bar a {
+    padding: 8px 14px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    background: rgba(255, 255, 255, 0.05);
+    cursor: pointer;
+}
+
+.avatar-bar a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-purple);
+    transform: translateY(-2px);
+    text-shadow: 0 0 5px var(--neon-blue);
+}
+
+
+.avatar-bar a.active {
+    background: var(--neon-blue);
+    color: white;
+    box-shadow: 0 0 10px var(--neon-blue), 0 0 20px var(--neon-purple);
+}
+
+/* Avatar images */
+.avatar-display {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.avatar-display img {
+    display: none;
+    max-height: 300px;
+    border-radius: 12px;
+    border: 2px solid var(--neon-pink);
+    box-shadow: 0 0 15px var(--neon-purple);
+}
+
+.avatar-display img.active {
+    display: inline-block;
+}
 
 .footer-left,
 .footer-right {
