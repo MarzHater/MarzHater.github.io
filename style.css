@@ -371,6 +371,7 @@ p {
 .footer-right {
     right: 10px; /* distance from right of screen */
 }
+
 /* div hiding and showing */
 .content {
     display: none; /* hide all content sections by default */
